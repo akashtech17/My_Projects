@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400;500;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400;500;700&display=swap"
+        rel="stylesheet">
+    <title>This my Project</title>
+    <style>
+        * {
+            font-family: 'League Spartan', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            line-height: 1.6;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: 40px 0 60px 0;
+            text-transform: capitalize;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        #Search-input {
+            width: 70%;
+            max-width: 400px;
+            padding: 10px 20px;
+            border: none;
+            box-shadow: 0 0 20px rgba(32, 31, 31, 0.5);
+            border-radius: 8px;
+            font-size: 18px;
+            color: #333;
+            outline: none;
+            text-transform: capitalize;
+            margin-left: 10px;
+        }
+
+        #Search-buttom {
+            padding: 10px 20px;
+            background-color: #138065;
+            color: #fff;
+            border: none;
+            margin-left: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(32, 31, 31, 0.5);
+            margin-right: 10px;
+        }
+
+        .Search-results {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .Search-result {
+            margin-bottom: 60px;
+            width: 30%;
+            height: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(32, 31, 31, 0.5);
+
+        }
+
+        .Search-result img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: 0.5s ease-in-out;
+        }
+
+        .Search-result:hover img {
+            opacity: 0.8;
+        }
+
+        .Search-result a {
+            font-size: 20px;
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 10px;
+            text-transform: capitalize;
+
+        }
+
+        #show-more-button {
+            background-color: #008cba;
+            font-size: 18px;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            display: block;
+            margin: 30px auto;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 0 40px rgba(22, 21, 21, 0.8);
+            display: none;
+        }
+
+        @media screen and (max-width:768px) {
+            .Search-results {
+                padding: 20px;
+            }
+
+            .Search-result {
+                width: 45%;
+            }
+        }
+
+        @media screen and (max-width:480px) {
+
+            .Search-result {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>Image Searching App</h1>
+    <form action="">
+        <input type="text" name="" id="Search-input" placeholder="Search for Image">
+        <button id="Search-buttom">Search</button>
+    </form>
+    <div class="Search-results">
+        <div class="Search-result">
+            <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
+                alt="the sun is setting over a desert landscape">
+            <a href="https://unsplash.com/photos/va9218QJFAk" target="_blank">the sun is setting over a desert
+                landscape</a>
+        </div>
+
+
+        <div class="Search-result">
+            <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
+                alt="the sun is setting over a desert landscape">
+            <a href="https://unsplash.com/photos/va9218QJFAk" target="_blank">the sun is setting over a desert
+                landscape</a>
+        </div>
+
+
+        <div class="Search-result">
+            <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
+                alt="the sun is setting over a desert landscape">
+            <a href="https://unsplash.com/photos/va9218QJFAk" target="_blank">the sun is setting over a desert
+                landscape</a>
+        </div>
+
+
+
+       
+
+
+    </div>
+
+    <button id="show-more-button">Show More</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const accessKey = "1BqTjNaSbY90R0OAj672aAW8ZTwPSLJvJzFgqafzO1c";
+
+        const formEl = document.querySelector("form");
+        const inputEl = document.getElementById("Search-input");
+        const searchResult = document.querySelector(".Search-results");
+        const showMoreBtn = document.getElementById("show-more-button");
+
+        let inputData = "";
+        let page = 1;
+
+        async function searchImages() {
+            inputData = inputEl.value;
+            const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey}`;
+
+            const response = await fetch(url);
+            const data = await response.json();
+
+            const results = data.results;
+
+            if (page === 1) {
+                searchResult.innerHTML = "";
+            }
+
+            results.map((result) => {
+                const imageWrapper = document.createElement('div');
+                imageWrapper.classList.add("Search-result");
+                const image = document.createElement('img');
+                image.src = result.urls.small;
+                image.alt = result.alt_description;
+                const imageLink = document.createElement('a');
+                imageLink.href = result.links.html;
+                imageLink.target = "_blank";
+                imageLink.textContent = result.alt_description;
+
+                imageWrapper.appendChild(image);
+                imageWrapper.appendChild(imageLink);
+                searchResult.appendChild(imageWrapper); // Fixed this line
+            });
+            page++;
+            if (page > 1) {
+                showMoreBtn.style.display = 'block';
+            }
+        }
+
+        formEl.addEventListener("submit", async (event) => { // Added "async" here
+            event.preventDefault();
+            page = 1;
+            await searchImages(); // Added "await" here
+        });
+
+        showMoreBtn.addEventListener("click", async () => { // Added "async" here
+            await searchImages(); // Added "await" here
+        });
+
+    </script>
+
+</body>
+
+</html>
