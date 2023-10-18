@@ -1,0 +1,5 @@
+api key 
+
+d84d73c960a169f2387440c72cfd9d71
+
+https://api.openweathermap.org/data/2.5/weather?q=Chennai&appid=d84d73c960a169f2387440c72cfd9d71&units=metric

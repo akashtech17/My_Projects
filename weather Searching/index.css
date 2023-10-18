@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  min-height: 100vh;
+ 
+}
+
+.card {
+  width: 90%;
+  max-width: 500px;
+
+  background-image: linear-gradient(to right bottom, #2dabfd, #47a2ff, #6c97ff, #9288ff,
+      #b774ff, #9484ff, #7290ff, #5199ff, #00b4ff, #00caf9, #00dbde, #4ee8bf);
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  background-size: 400% 400%;
+  animation: ani 5s ease infinite;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background-color: #ebfffc;
+  color: #555;
+  padding: 10px 15px;
+  height: 40px;
+  border-radius: 20px;
+  flex: 1;
+  margin-right: 10px;
+  font-size: 14px;
+  box-shadow: 0px 0px 20px rgb(0, 0, 0);
+}
+
+.search button {
+  border: none;
+  outline: none;
+  background-color: #ebfffc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgb(0, 0, 0);
+}
+
+.search button img {
+  width: 16px;
+}
+
+.weather-icon {
+  width: 100px;
+  margin-top: 20px;
+}
+
+.weather h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.weather h2 {
+  font-size: 24px;
+  font-weight: 400px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 50px;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.col img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.humidity,
+.wind {
+  font-size: 18px;
+  margin-top: -6px;
+}
+
+@keyframes ani {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .search {
+width: 30%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+}
+
+.h1{
+  color: white;
+  text-align: center;
+}

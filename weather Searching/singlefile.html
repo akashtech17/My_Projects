@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Weather App</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #222;
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      margin: 20px;
+      min-height: 100vh;
+     
+    }
+
+    .card {
+      width: 90%;
+      max-width: 500px;
+    
+      background-image: linear-gradient(to right bottom, #2dabfd, #47a2ff, #6c97ff, #9288ff,
+          #b774ff, #9484ff, #7290ff, #5199ff, #00b4ff, #00caf9, #00dbde, #4ee8bf);
+      color: #fff;
+      border-radius: 20px;
+      padding: 10px;
+      text-align: center;
+      background-size: 400% 400%;
+      animation: ani 5s ease infinite;
+      overflow: hidden;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+      flex-wrap: wrap;
+      margin: 20px auto;
+    }
+
+    .search {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .search input {
+      border: none;
+      outline: none;
+      background-color: #ebfffc;
+      color: #555;
+      padding: 10px 15px;
+      height: 40px;
+      border-radius: 20px;
+      flex: 1;
+      margin-right: 10px;
+      font-size: 14px;
+      box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    }
+
+    .search button {
+      border: none;
+      outline: none;
+      background-color: #ebfffc;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    }
+
+    .search button img {
+      width: 16px;
+    }
+
+    .weather-icon {
+      width: 100px;
+      margin-top: 20px;
+    }
+
+    .weather h1 {
+      font-size: 40px;
+      font-weight: 500;
+    }
+
+    .weather h2 {
+      font-size: 24px;
+      font-weight: 400px;
+    }
+
+    .details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin-top: 50px;
+    }
+
+    .col {
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    .col img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .humidity,
+    .wind {
+      font-size: 18px;
+      margin-top: -6px;
+    }
+
+    @keyframes ani {
+      0% {
+        background-position: 0%;
+      }
+
+      50% {
+        background-position: 100%;
+      }
+
+      100% {
+        background-position: 0%;
+      }
+    }
+
+    @media screen and (max-width:320px) {
+      .search {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+    }
+
+    .h1{
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="h1">NO MOBILE USE LANC SCAPE </h1>
+  <div class="card">
+    <div class="search">
+      <input type="text" placeholder="Enter City Name" spellcheck="false">
+      <button><img src="/images/search.png" alt=""></button>
+    </div>
+
+    <div class="weather">
+      <img src="/images/rain.png" class="weather-icon">
+      <h1 class="temp">22°c</h1>
+      <h2 class="city">Vaniyambadi</h2>
+
+      <div class="details">
+        <div class="col">
+          <img src="/images/humidity.png">
+          <div>
+            <p class="humidity">50%</p>
+            <p>Humidity</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <img src="/images/wind.png">
+          <div>
+            <p class="wind">15 Km/h</p>
+            <p>Wind</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <script>
+    const apiKey = "d84d73c960a169f2387440c72cfd9d71";
+    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+    const searchBox = document.querySelector(".search input");
+    const searchBtn = document.querySelector(".search button");
+
+    async function checkWeather(city) {
+      const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+      var data = await response.json();
+      console.log(data);
+
+
+      document.querySelector(".city").innerHTML = data.name;
+      document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
+      document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+      document.querySelector(".wind").innerHTML = data.wind.speed + "Km/h";
+
+    }
+
+    searchBtn.addEventListener("click", () => {
+      checkWeather(searchBox.value)
+    });
+
+
+
+
+  </script>
+</body>
+
+</html>
