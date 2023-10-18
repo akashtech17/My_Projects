@@ -1,0 +1,129 @@
+*{
+    font-family: 'League Spartan', sans-serif;
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    line-height: 1.6;
+   
+    /* background-size: 400% 400%;
+    animation: bganimation 9s linear infinite; */
+
+}
+h1{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 40px 0 60px 0;
+    text-transform: capitalize;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+#Search-input{
+    width: 70%;
+    max-width: 400px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0 0 20px rgba(32, 31, 31, 0.5);
+    border-radius: 8px;
+    font-size: 18px;
+    color: #333;
+    outline: none;
+    text-transform: capitalize;
+    margin-left: 10px;
+}
+#Search-buttom{
+    padding: 10px 20px;
+    background-color: #138065;
+    color: #fff;
+    border: none;
+    margin-left: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(32, 31, 31, 0.5);
+    margin-right: 10px;
+}
+.Search-results{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.Search-result{
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(32, 31, 31, 0.5);
+
+}
+.Search-result img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+.Search-result:hover img{
+    opacity: 0.8;
+}
+.Search-result a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize;
+   
+  
+}
+#show-more-button{
+    background-color: #008cba;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 40px rgba(22, 21, 21, 0.8);
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .Search-results{
+        padding: 20px;
+    }
+    .Search-result{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:480px) {
+   
+    .Search-result{
+        width: 100%;
+    }
+}
+
+/* @keyframes bganimation {
+    0%{
+        background-position: 0%;
+    }
+    50%{
+        background-position: 100%;
+    }
+    100%{
+        background-position: 0%;
+    }
+} */
